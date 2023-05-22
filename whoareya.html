@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Who Are Ya? Big 5</title>
+  <style>
+    /* CSS styles for the layout */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .team {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .team img {
+      width: 80px;
+      height: 80px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Who Are Ya? Big 5</h1>
+    <div id="teams"></div>
+  </div>
+
+  <script>
+    // JavaScript code to fetch and display team data
+    window.addEventListener('DOMContentLoaded', () => {
+      const teamsContainer = document.getElementById('teams');
+
+      // Replace the URL with your own data source
+      const apiUrl = 'https://api.example.com/teams';
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          data.forEach(team => {
+            const teamElement = createTeamElement(team);
+            teamsContainer.appendChild(teamElement);
+          });
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    });
+
+    function createTeamElement(team) {
+      const teamElement = document.createElement('div');
+      teamElement.className = 'team';
+
+      const teamImage = document.createElement('img');
+      teamImage.src = team.logo;
+      teamElement.appendChild(teamImage);
+
+      const teamName = document.createElement('h2');
+      teamName.textContent = team.name;
+      teamElement.appendChild(teamName);
+
+      const teamCountry = document.createElement('p');
+      teamCountry.textContent = `Country: ${team.country}`;
+      teamElement.appendChild(teamCountry);
+
+      return teamElement;
+    }
+  </script>
+</body>
+</html>
