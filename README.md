@@ -174,5 +174,5 @@ folium.Marker(
     icon = folium.Icon(color = 'pink', prefix = 'fa', icon = 'heart')
 ).add_to(map)
 
-map.save('map.html')
+map.save('index.html')
 ```
