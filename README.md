@@ -102,7 +102,7 @@ folium.Marker(
 folium.Marker(
     [35.68055, 139.76887],
     tooltip = 'Tokyo',
-    popup = folium.Popup('190122~190126 230429~230501'),
+    popup = folium.Popup('190122~190126 230429~230501(E)'),
     icon = folium.Icon(color = 'pink', prefix = 'fa', icon = 'heart')
 ).add_to(map)
 
@@ -155,7 +155,8 @@ folium.Marker(
 folium.Marker(
     [34.67145, 135.49828],
     tooltip = 'Osaka',
-    popup = folium.Popup('230824~230827'),
+    popup = folium.Popup('230824~230827 240602~240605(E)'),
+    icon = folium.Icon(color = 'pink', prefix = 'fa', icon = 'heart')
 ).add_to(map)
 
 
@@ -170,7 +171,7 @@ folium.Marker(
 folium.Marker(
     [9.84801, 124.14378],
     tooltip = 'Bohol',
-    popup = folium.Popup('240116~240121'),
+    popup = folium.Popup('240116~240121(E)'),
     icon = folium.Icon(color = 'pink', prefix = 'fa', icon = 'heart')
 ).add_to(map)
 
