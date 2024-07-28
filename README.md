@@ -14,7 +14,8 @@ folium.Marker(
 folium.Marker(
     [33.56864, 130.35804],
     tooltip = 'Fukuoka',
-    popup = folium.Popup('180130~180202'),
+    popup = folium.Popup('180130~180202 240723~240724(E)'),
+    icon = folium.Icon(color = 'pink', prefix = 'fa', icon = 'heart')
 ).add_to(map)
 
 folium.Marker(
